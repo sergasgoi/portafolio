@@ -48,6 +48,7 @@
             align-items: center;
             text-align: center;
             animation: fadeIn 2s;
+            padding: 0 20px;
         }
         .header h1 {
             margin: 0;
@@ -65,7 +66,7 @@
             margin-top: 20px;
         }
         .header .social-links img {
-            width: 70px;
+            width: 50px;
             margin: 0 10px;
             transition: transform 0.3s;
         }
@@ -74,6 +75,8 @@
         }
         .content {
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .section {
             margin-bottom: 40px;
@@ -83,7 +86,7 @@
             margin-bottom: 20px;
             animation: fadeInUp 1s;
         }
-        .project, .technology {
+        .project {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
@@ -92,25 +95,27 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            flex-direction: column;
+            text-align: center;
         }
-        .project:hover, .technology:hover {
+        .project:hover {
             transform: translateY(-10px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .project img, .technology img {
-            width: 600px;
+        .project img {
+            max-width: 100%;
             height: auto;
             border-radius: 8px;
-            margin-right: 20px;
+            margin-bottom: 20px;
         }
-        .project p, .technology p {
+        .project p {
             margin: 10px 0 0;
         }
-        .project .links, .technology .links {
+        .project .links {
             margin-top: 10px;
         }
-        .project .links img, .technology .links img, .contact-item img{
-            width: 40px;
+        .project .links img, .contact-item img {
+            width: 30px;
             margin-right: 10px;
             vertical-align: middle;
         }
@@ -119,7 +124,7 @@
             justify-content: space-around;
             flex-wrap: wrap;
         }
-        .skill, .contact-item {
+        .skill, .contact-item, .technology {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -128,9 +133,24 @@
             flex: 1 1 200px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        .skill:hover, .contact-item:hover {
+
+        .contact-item {
+            padding-top: 5px;
+        }
+
+        .technology {
+            padding-top: 5px;  
+            flex: 1 1 50px;
+        }
+
+        .skill:hover, .contact-item:hover, .technology:hover {
             transform: translateY(-10px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .technology img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
         .footer {
             background-color: #444;
@@ -148,6 +168,20 @@
         }
         html {
             scroll-behavior: smooth;
+        }
+
+        @media (min-width: 768px) {
+            .project {
+                flex-direction: row;
+                text-align: left;
+            }
+            .project img {
+                max-width: 50%;
+                margin-right: 20px;
+            }
+            .project img:last-child {
+                margin-right: 0;
+            }
         }
     </style>
 </head>
@@ -199,8 +233,9 @@
                     <p>Una plataforma para gestionar sorteos donde los usuarios pueden ver sorteos disponibles, solicitar números, y crear y administrar sorteos. Incluye roles de usuario y administrador.</p>
                     <p>Usuario: usuario1 Contraseña: 1234</p>
                     <p>Usuario: usuario2 Contraseña: 1234</p>
+                    <p>Usuario: administrador Contraseña: 1234</p>
                     <div class="links">
-                        <a href="https://sorteo-hp5c.onrender.com/" target="_blank">
+                        <a href="https://sorteos.onrender.com/" target="_blank">
                             <img src="images/url.png" alt="Dominio">
                         </a>
                         <a href="https://github.com/sergasgoi/sorteos" target="_blank">
@@ -211,42 +246,18 @@
             </div>
 
             <div class="project">
-                <img src="images/licencias.PNG" alt="Licencias para Empleados">
+                <img src="images/licencias.PNG" alt="Gestión de Licencias">
                 <div>
-                    <h3>Licencias para Empleados</h3>
-                    <p>Una aplicación para la gestión de licencias de empleados que permite agregar, editar y eliminar empleados, registrar licencias y visualizar todas las licencias de un empleado específico.</p>
-                    <p>Usuario: usuario1 Contraseña: 1234</p>
-                    <div class="links">
-                        <a href="https://licencias-app.onrender.com/" target="_blank">
-                            <img src="images/url.png" alt="Dominio">
-                        </a>
-                        <a href="https://github.com/sergasgoi/solicitudes" target="_blank">
-                            <img src="images/github.png" alt="GitHub">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <img src="images/sasdeco.PNG" alt="Venta de Artículos Personalizados">
-                <div>
-                    <h3>Venta de Artículos Personalizados</h3>
-                    <p>Una tienda en línea para artículos personalizados con páginas de inicio, productos y sobre nosotros. La administración permite agregar, editar y eliminar contenido dinámicamente.</p>
+                    <h3>Gestión de Licencias</h3>
+                    <p>Una aplicación para gestionar licencias de empleados, con funcionalidades para registrar, editar, eliminar, y buscar empleados, así como registrar y ver licencias de los empleados.</p>
                     <p>Usuario: administrador Contraseña: 123456</p>
+                    <p>Usuario: usuario Contraseña: 123456</p>
                     <div class="links">
-                        <p>Front:</p>
-                        <a href="https://sasdeco.netlify.app/" target="_blank">
+                        <a href="https://licencias.onrender.com/" target="_blank">
                             <img src="images/url.png" alt="Dominio">
                         </a>
-                        <a href="https://github.com/sergasgoi/sasdecofront" target="_blank">
-                            <img src="images/github.png" alt="GitHub Front">
-                        </a>
-                        <p>Back:</p>
-                        <a href="https://sasdecoback.onrender.com/" target="_blank">
-                            <img src="images/url.png" alt="Dominio">
-                        </a>
-                        <a href="https://github.com/sergasgoi/sasdecoback" target="_blank">
-                            <img src="images/github.png" alt="GitHub Back">
+                        <a href="https://github.com/sergasgoi/licencias" target="_blank">
+                            <img src="images/github.png" alt="GitHub">
                         </a>
                     </div>
                 </div>
@@ -256,66 +267,69 @@
         <div class="section" id="technologies">
             <h2>Tecnologías</h2>
             <div class="skills">
-                <div class="skill">
-                    <h3>HTML</h3>
-                    <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt="HTML">
+                <div class="technology">
+                    <h2>HTML</h2><img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt="HTML">
                 </div>
-                <div class="skill">
-                    <h3>CSS</h3>
+
+                <div class="technology">
+                    <h2>CSS</h2>
                     <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS">
                 </div>
-                <div class="skill">
-                    <h3>JavaScript</h3>
+
+                <div class="technology">
+                    <h2>JavaScript</h2>
                     <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt="JavaScript">
                 </div>
-                <div class="skill">
-                    <h3>Node.js</h3>
+
+                <div class="technology">
+                    <h2>Node.js</h2>
                     <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js">
                 </div>
-                <div class="skill">
-                    <h3>Express.js</h3>
+
+                <div class="technology">
+                    <h2>Express.js</h2>
                     <img src="https://img.icons8.com/color/48/000000/express.png" alt="Express.js">
                 </div>
-                <div class="skill">
-                    <h3>MySQL</h3>
-                    <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL">
-                </div>
-                <div class="skill">
-                    <h3>React</h3>
+
+                <div class="technology">
+                    <h2>React</h2>
                     <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React">
                 </div>
+
+                <div class="technology">
+                    <h2>MySQL</h2>
+                    <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL">
+                </div>
+
             </div>
         </div>
 
         <div class="section" id="about">
             <h2>Acerca de Mí</h2>
-            <p>Soy Sergio Gastón Goi, un desarrollador apasionado por crear soluciones innovadoras y funcionales. Con experiencia en diversas tecnologías, siempre busco aprender y mejorar en cada proyecto.</p>
+            <p>Mi nombre es Sergio Gastón Goi, soy un desarrollador web FullStack con experiencia en diversas tecnologías y proyectos.</p>
+            <p>Me apasiona el desarrollo de software y la creación de soluciones que mejoren la vida de las personas.</p>
         </div>
 
         <div class="section" id="contact">
             <h2>Contacto</h2>
-            <p>Si deseas contactarme, puedes encontrarme en las siguientes plataformas:</p>
             <div class="contact">
                 <div class="contact-item">
-                    <h3>Email</h3>
-                    <p>sergasgoi@hotmail.com</p>
+                    <h2>Email</h2>
+                    <span>sergasgoi@hotmail.com</span>
                 </div>
                 <div class="contact-item">
-                    <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/sergasgoi/" target="_blank">
-                        <img src="images/linkedin.png" alt="LinkedIn">
-                    </a></p>
+                    <h2>LinkedIn</h2>
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                    <a href="https://www.linkedin.com/in/sergasgoi/" target="_blank">LinkedIn</a>
                 </div>
                 <div class="contact-item">
-                    <h3>GitHub</h3>
-                    <p><a href="https://github.com/sergasgoi" target="_blank">
-                        <img src="images/github.png" alt="Github">
-                    </a></p>
+                    <h2>GitHub</h2>
+                    <img src="images/github.png" href="https://github.com/sergasgoi" alt="GitHub">
+                    <a href="https://github.com/sergasgoi" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="footer">
         <p>&copy; 2024 Sergio Gastón Goi. Todos los derechos reservados.</p>
     </div>
