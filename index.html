@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
             background-color: #f0f0f0;
             overflow-x: hidden;
         }
+
         .navbar {
             display: flex;
             justify-content: center;
@@ -25,6 +27,7 @@
             z-index: 1000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .navbar a {
             color: #f0f0f0;
             padding: 14px 20px;
@@ -33,10 +36,12 @@
             transition: background-color 0.3s, color 0.3s;
             border-radius: 5px;
         }
+
         .navbar a:hover {
             background-color: #666;
             color: #f0f0f0;
         }
+
         .header {
             position: relative;
             height: 100vh;
@@ -50,11 +55,13 @@
             animation: fadeIn 2s;
             padding: 0 20px;
         }
+
         .header h1 {
             margin: 0;
             font-size: 3em;
             text-shadow: 2px 5px 10px rgba(0, 0, 0, 1);
         }
+
         .header p {
             font-size: 1.5em;
             text-shadow: 3px 1px 16px rgba(0, 0, 0, 1);
@@ -62,30 +69,37 @@
             padding: 10px;
             border-radius: 8px;
         }
+
         .header .social-links {
             margin-top: 20px;
         }
+
         .header .social-links img {
             width: 50px;
             margin: 0 10px;
             transition: transform 0.3s;
         }
+
         .header .social-links img:hover {
             transform: scale(1.1);
         }
+
         .content {
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .section {
             margin-bottom: 40px;
         }
+
         .section h2 {
             font-size: 2em;
             margin-bottom: 20px;
             animation: fadeInUp 1s;
         }
+
         .project {
             display: flex;
             align-items: center;
@@ -98,33 +112,44 @@
             flex-direction: column;
             text-align: center;
         }
+
         .project:hover {
             transform: translateY(-10px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .project img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             margin-bottom: 20px;
         }
+
         .project p {
             margin: 10px 0 0;
         }
+
         .project .links {
             margin-top: 10px;
         }
-        .project .links img, .contact-item img {
+
+        .project .links img,
+        .contact-item img {
             width: 30px;
             margin-right: 10px;
             vertical-align: middle;
         }
-        .skills, .contact {
+
+        .skills,
+        .contact {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
         }
-        .skill, .contact-item, .technology {
+
+        .skill,
+        .contact-item,
+        .technology {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -139,33 +164,53 @@
         }
 
         .technology {
-            padding-top: 5px;  
+            padding-top: 5px;
             flex: 1 1 50px;
         }
 
-        .skill:hover, .contact-item:hover, .technology:hover {
+        .skill:hover,
+        .contact-item:hover,
+        .technology:hover {
             transform: translateY(-10px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .technology img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
+
         }
+
         .footer {
             background-color: #444;
             color: #f0f0f0;
             padding: 10px;
             text-align: center;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         html {
             scroll-behavior: smooth;
         }
@@ -175,16 +220,19 @@
                 flex-direction: row;
                 text-align: left;
             }
+
             .project img {
                 max-width: 50%;
                 margin-right: 20px;
             }
+
             .project img:last-child {
                 margin-right: 0;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="navbar">
         <a href="#projects" onclick="navigateToSection(event, 'projects')">Proyectos</a>
@@ -202,7 +250,8 @@
                 <img src="images/github.png" alt="GitHub">
             </a>
         </div>
-        <p>Mi nombre es Sergio Gastón Goi <br> Soy un Desarrollador Web FullStack <br> implementando varias tecnologías. </p>
+        <p>Mi nombre es Sergio Gastón Goi <br> Soy un Desarrollador Web FullStack <br> implementando varias tecnologías.
+        </p>
     </div>
     <div class="content">
         <div class="section" id="projects">
@@ -212,9 +261,11 @@
                 <img src="images/puntoventa.PNG" alt="Punto de Venta">
                 <div>
                     <h3>Punto de Venta</h3>
-                    <p>Un sistema de punto de venta que permite iniciar turnos, cargar productos con precios en una base de datos, y ver los cierres y productos cargados. Incluye roles de usuario para administración y operación.</p>
-                    <p>Usuario: administrador Contraseña: 123456</p>
-                    <p>Usuario: usuario Contraseña: 123456</p>
+                    <p>Un sistema de punto de venta que permite iniciar turnos, cargar productos con precios en una base
+                        de datos, y ver los cierres y productos cargados. Incluye roles de usuario para administración y
+                        operación.</p>
+                    <p>Usuario: administrador | Contraseña: 123456</p>
+                    <p>Usuario: usuario | Contraseña: 123456</p>
                     <div class="links">
                         <a href="https://puntoventa-bd18.onrender.com/" target="_blank">
                             <img src="images/url.png" alt="Dominio">
@@ -230,12 +281,12 @@
                 <img src="images/sorteos.PNG" alt="Página de Sorteos">
                 <div>
                     <h3>Página de Sorteos</h3>
-                    <p>Una plataforma para gestionar sorteos donde los usuarios pueden ver sorteos disponibles, solicitar números, y crear y administrar sorteos. Incluye roles de usuario y administrador.</p>
-                    <p>Usuario: usuario1 Contraseña: 1234</p>
-                    <p>Usuario: usuario2 Contraseña: 1234</p>
-                    <p>Usuario: administrador Contraseña: 1234</p>
+                    <p>Una plataforma para gestionar sorteos donde los usuarios pueden ver sorteos disponibles,
+                        solicitar números, y crear y administrar sorteos. Incluye roles de usuario y administrador.</p>
+                    <p>Usuario: usuario1 | Contraseña: 1234</p>
+                    <p>Usuario: usuario2 | Contraseña: 1234</p>
                     <div class="links">
-                        <a href="https://sorteos.onrender.com/" target="_blank">
+                        <a href="https://sorteo-hp5c.onrender.com/" target="_blank">
                             <img src="images/url.png" alt="Dominio">
                         </a>
                         <a href="https://github.com/sergasgoi/sorteos" target="_blank">
@@ -249,17 +300,44 @@
                 <img src="images/licencias.PNG" alt="Gestión de Licencias">
                 <div>
                     <h3>Gestión de Licencias</h3>
-                    <p>Una aplicación para gestionar licencias de empleados, con funcionalidades para registrar, editar, eliminar, y buscar empleados, así como registrar y ver licencias de los empleados.</p>
-                    <p>Usuario: administrador Contraseña: 123456</p>
-                    <p>Usuario: usuario Contraseña: 123456</p>
+                    <p>Una aplicación para gestionar licencias de empleados, con funcionalidades para registrar, editar,
+                        eliminar, y buscar empleados, así como registrar y ver licencias de los empleados.</p>
+                    <p>Usuario: administrador | Contraseña: 123456</p>
+                    <p>Usuario: usuario | Contraseña: 123456</p>
                     <div class="links">
-                        <a href="https://licencias.onrender.com/" target="_blank">
+                        <a href="https://licencias-app.onrender.com/" target="_blank">
                             <img src="images/url.png" alt="Dominio">
                         </a>
                         <a href="https://github.com/sergasgoi/licencias" target="_blank">
                             <img src="images/github.png" alt="GitHub">
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/sasdeco.PNG" alt="Venta de Artículos Personalizados">
+            <div>
+                <h3>Venta de Artículos Personalizados</h3>
+                <p>Una tienda en línea para artículos personalizados con páginas de inicio, productos y sobre nosotros.
+                    La administración permite agregar, editar y eliminar contenido dinámicamente.</p>
+                <p>Usuario: administrador | Contraseña: 123456</p>
+                <div class="links">
+                    <p>Front:</p>
+                    <a href="https://sasdeco.netlify.app/" target="_blank">
+                        <img src="images/url.png" alt="Dominio">
+                    </a>
+                    <a href="https://github.com/sergasgoi/sasdecofront" target="_blank">
+                        <img src="images/github.PNG" alt="GitHub Front">
+                    </a>
+                    <p>Back:</p>
+                    <a href="https://sasdecoback.onrender.com/" target="_blank">
+                        <img src="images/url.png" alt="Dominio">
+                    </a>
+                    <a href="https://github.com/sergasgoi/sasdecoback" target="_blank">
+                        <img src="images/github.PNG" alt="GitHub Back">
+                    </a>
                 </div>
             </div>
         </div>
@@ -306,8 +384,10 @@
 
         <div class="section" id="about">
             <h2>Acerca de Mí</h2>
-            <p>Mi nombre es Sergio Gastón Goi, soy un desarrollador web FullStack con experiencia en diversas tecnologías y proyectos.</p>
-            <p>Me apasiona el desarrollo de software y la creación de soluciones que mejoren la vida de las personas.</p>
+            <p>Mi nombre es Sergio Gastón Goi, soy un desarrollador web FullStack con experiencia en diversas
+                tecnologías y proyectos.</p>
+            <p>Me apasiona el desarrollo de software y la creación de soluciones que mejoren la vida de las personas.
+            </p>
         </div>
 
         <div class="section" id="contact">
@@ -341,4 +421,5 @@
         }
     </script>
 </body>
+
 </html>
